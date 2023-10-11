@@ -1,5 +1,5 @@
 #!/bin/sh
 
-/usr/local/bin/mopidy &
+/usr/bin/rygel &
 
-
+/usr/local/bin/mopidy
