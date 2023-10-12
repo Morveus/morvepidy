@@ -42,8 +42,8 @@ COPY entrypoint.sh /app/entrypoint.sh
 
 RUN chmod 775 /app/entrypoint.sh
 
-EXPOSE 6680
-EXPOSE 1900/udp
-EXPOSE 49152-49252
+#EXPOSE 6680
+#EXPOSE 1900/udp
+#EXPOSE 49152-49252
 
 CMD ["sh", "-c", "/app/entrypoint.sh"]
