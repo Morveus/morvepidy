@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  morvepidy:
+    image: morveus/morvepidy
+    restart: unless-stopped
+    volumes:
+      - ./data/cache:/mopidy/cache
+      - ./data/config:/mopidy/config
+      - ./data/data:/mopidy/data
+    ports:
+      - 6680:6680
+      - 1900:1900/udp
+      - 49152-49252:49152-49252
+    command: sh -c /app/entrypoint.sh
